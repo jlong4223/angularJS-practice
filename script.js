@@ -7,8 +7,14 @@ myApp.controller("myListController", function ($scope) {
   $scope.title = "Javascript Frameworks";
   $scope.items = ["AngularJS", "ReactJS", "VueJS"];
   $scope.newItem = "";
-
+  $scope.myName = "Jared's favorites";
+  $scope.itemsTwo = ["React.js", "Node.js", "MongoDB", "Vue.js", "Node.js"];
+  //   the below function is taking the newitem being typed and pushing it to the items array
+  //   it is able to do so bc the newItem is binded to the input
   $scope.pushItem = function () {
-    console.log("clicked");
+    if ($scope.newItem != "") {
+      $scope.items.push($scope.newItem);
+      $scope.newItem = "";
+    }
   };
 });
