@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AngularApp</title>
+    <title>AngularJSApp</title>
   </head>
   <body>
     <!-- ng-app is getting the module name found in script.js - same with ng-controller-->
     <div class="main" ng-app="myList" ng-controller="myListController">
       <h1>Items List</h1>
       <div class="addItem">
-        <input placeholder="addItem" class="addText" />
-        <button>Add</button>
+        <!-- ng-model is binding to the newItem array, it allows you to change the value  -->
+        <!-- ng-click is like onCLick in react - it will call the function attached to it -->
+        <input
+          ng-model="newItem"
+          placeholder="add framework or language"
+          class="addText"
+        />
+        <button ng-click="pushItem()">Add</button>
       </div>
+      <h2>{{title}}</h2>
       <ul>
         <!-- using ng-repeat as a way to loop over the items defined in the controller -->
         <li ng-repeat="item in items">
@@ -22,6 +29,7 @@
         </li>
       </ul>
     </div>
+    <!-- linking in angularJS version -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="script.js"></script>
   </body>
