@@ -6,7 +6,8 @@
     <title>AngularApp</title>
   </head>
   <body>
-    <div class="main">
+    <!-- ng-app is getting the module name found in script.js - same with ng-controller-->
+    <div class="main" ng-app="myList" ng-controller="myListController">
       <h1>Items List</h1>
       <div class="addItem">
         <input placeholder="addItem" class="addText" />
