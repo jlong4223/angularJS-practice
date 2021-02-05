@@ -5,10 +5,11 @@ let myApp = angular.module("myList", []);
 myApp.controller("myListController", function ($scope) {
   // every item binded in this controller can be binded to index.html bc the index.html controller is using this one
   $scope.title = "Javascript Frameworks";
+  $scope.itemsTwo = ["React.js", "Node.js", "MongoDB", "Vue.js", "Node.js"];
   $scope.items = ["AngularJS", "ReactJS", "VueJS"];
   $scope.newItem = "";
   $scope.myName = "Jared's favorites";
-  $scope.itemsTwo = ["React.js", "Node.js", "MongoDB", "Vue.js", "Node.js"];
+  $scope.wifeName = "joy";
   //   the below function is taking the newitem being typed and pushing it to the items array
   //   it is able to do so bc the newItem is binded to the input
   $scope.pushItem = function () {
