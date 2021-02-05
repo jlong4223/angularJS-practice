@@ -17,4 +17,9 @@ myApp.controller("myListController", function ($scope) {
       $scope.newItem = "";
     }
   };
+
+  $scope.deleteItem = function (index) {
+    console.log("deleted");
+    $scope.items.splice(index, 1);
+  };
 });

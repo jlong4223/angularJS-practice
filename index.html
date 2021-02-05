@@ -25,19 +25,11 @@
         <li ng-repeat="item in items">
           <!-- this is how to display that item -->
           {{item}}
-          <span>x</span>
+          <span ng-click="deleteItem($index)">x</span>
         </li>
       </ul>
 
       <h2>{{myName}}</h2>
-      <ul>
-        <!-- using ng-repeat as a way to loop over the items defined in the controller -->
-        <li ng-repeat="x in itemsTwo">
-          <!-- this is how to display that item -->
-          {{x}}
-          <span>x</span>
-        </li>
-      </ul>
     </div>
     <!-- linking in angularJS version -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
