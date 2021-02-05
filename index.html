@@ -14,8 +14,12 @@
         <button>Add</button>
       </div>
       <ul>
-        <li></li>
-        <span>x</span>
+        <!-- using ng-repeat as a way to loop over the items defined in the controller -->
+        <li ng-repeat="item in items">
+          <!-- this is how to display that item -->
+          {{item}}
+          <span>x</span>
+        </li>
       </ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
